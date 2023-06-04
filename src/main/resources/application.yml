@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/batch
+    username: postgres
+    password: postgres
+  liquibase:
+    enabled: true
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+
+application:
+  tokens: id, name
+  input: src/main/resources/input/input.csv
+  output: src/main/resources/json/output.json
